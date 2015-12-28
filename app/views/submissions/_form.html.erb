@@ -1,0 +1,284 @@
+<style form > div {
+  float:left;
+  display: inline-block;
+}
+</style>
+
+<%= form_for(@submission) do |f| %>
+  <% if @submission.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@submission.errors.count, "error") %> prohibited this submission from being saved:</h2>
+
+      <ul>
+      <% @submission.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="Player">
+  <div class="field">
+    <%= f.label :p1_first_name %><br>
+    <%= f.text_field :p1_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p1_last_name %><br>
+    <%= f.text_field :p1_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p1_handicap %><br>
+    <%= f.text_field :p1_handicap %>
+  </div>
+  <div class="field">
+    <%= f.label :p1_club %><br>
+    <%= f.text_field :p1_club %>
+  </div>
+  <div class="field">
+    <%= f.label :p1_venue %><br>
+    <%= f.text_field :p1_venue, :value => @venue %>
+  </div>
+  <div class="field">
+    <%= f.label :p1_position %><br>
+    <%= f.number_field :p1_position, :value => '1' %>
+  </div>
+</div>
+<div class="Player">
+  <div class="field">
+    <%= f.label :p2_first_name %><br>
+    <%= f.text_field :p2_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p2_last_name %><br>
+    <%= f.text_field :p2_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p2_handicap %><br>
+    <%= f.text_field :p2_handicap %>
+  </div>
+  <div class="field">
+    <%= f.label :p2_club %><br>
+    <%= f.text_field :p2_club %>
+  </div>
+  <div class="field">
+    <%= f.label :p2_venue %><br>
+    <%= f.text_field :p2_venue, :value => @venue %>
+  </div>
+  <div class="field">
+    <%= f.label :p2_position %><br>
+    <%= f.number_field :p2_position, :value => '2' %>
+  </div>
+</div>
+<div class="Player">
+  <div class="field">
+    <%= f.label :p3_first_name %><br>
+    <%= f.text_field :p3_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p3_last_name %><br>
+    <%= f.text_field :p3_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p3_handicap %><br>
+    <%= f.text_field :p3_handicap %>
+  </div>
+  <div class="field">
+    <%= f.label :p3_club %><br>
+    <%= f.text_field :p3_club %>
+  </div>
+  <div class="field">
+    <%= f.label :p3_venue %><br>
+    <%= f.text_field :p3_venue, :value => @venue %>
+  </div>
+  <div class="field">
+    <%= f.label :p3_position %><br>
+    <%= f.number_field :p3_position, :value => '3' %>
+  </div>
+</div>
+<div class="Player">
+  <div class="field">
+    <%= f.label :p4_first_name %><br>
+    <%= f.text_field :p4_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p4_last_name %><br>
+    <%= f.text_field :p4_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p4_handicap %><br>
+    <%= f.text_field :p4_handicap %>
+  </div>
+  <div class="field">
+    <%= f.label :p4_club %><br>
+    <%= f.text_field :p4_club %>
+  </div>
+  <div class="field">
+    <%= f.label :p4_venue %><br>
+    <%= f.text_field :p4_venue, :value => @venue %>
+  </div>
+  <div class="field">
+    <%= f.label :p4_position %><br>
+    <%= f.number_field :p4_position, :value => '4' %>
+  </div>
+</div>
+<div class="Player">
+  <div class="field">
+    <%= f.label :p5_first_name %><br>
+    <%= f.text_field :p5_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p5_last_name %><br>
+    <%= f.text_field :p5_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p5_handicap %><br>
+    <%= f.text_field :p5_handicap %>
+  </div>
+  <div class="field">
+    <%= f.label :p5_club %><br>
+    <%= f.text_field :p5_club %>
+  </div>
+  <div class="field">
+    <%= f.label :p5_venue %><br>
+    <%= f.text_field :p5_venue, :value => @venue %>
+  </div>
+  <div class="field">
+    <%= f.label :p5_position %><br>
+    <%= f.number_field :p5_position, :value => '5' %>
+  </div>
+</div>
+<div class="Player">
+  <div class="field">
+    <%= f.label :p6_first_name %><br>
+    <%= f.text_field :p6_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p6_last_name %><br>
+    <%= f.text_field :p6_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p6_handicap %><br>
+    <%= f.text_field :p6_handicap %>
+  </div>
+  <div class="field">
+    <%= f.label :p6_club %><br>
+    <%= f.text_field :p6_club %>
+  </div>
+  <div class="field">
+    <%= f.label :p6_venue %><br>
+    <%= f.text_field :p6_venue, :value => @venue %>
+  </div>
+  <div class="field">
+    <%= f.label :p6_position %><br>
+    <%= f.number_field :p6_position, :value => '6' %>
+  </div>
+</div>
+<div class="Player">
+  <div class="field">
+    <%= f.label :p7_first_name %><br>
+    <%= f.text_field :p7_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p7_last_name %><br>
+    <%= f.text_field :p7_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p7_handicap %><br>
+    <%= f.text_field :p7_handicap %>
+  </div>
+  <div class="field">
+    <%= f.label :p7_club %><br>
+    <%= f.text_field :p7_club %>
+  </div>
+  <div class="field">
+    <%= f.label :p7_venue %><br>
+    <%= f.text_field :p7_venue, :value => @venue %>
+  </div>
+  <div class="field">
+    <%= f.label :p7_position %><br>
+    <%= f.number_field :p7_position, :value => '7' %>
+  </div>
+</div>
+<div class="Player">
+  <div class="field">
+    <%= f.label :p8_first_name %><br>
+    <%= f.text_field :p8_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p8_last_name %><br>
+    <%= f.text_field :p8_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p8_handicap %><br>
+    <%= f.text_field :p8_handicap %>
+  </div>
+  <div class="field">
+    <%= f.label :p8_club %><br>
+    <%= f.text_field :p8_club %>
+  </div>
+  <div class="field">
+    <%= f.label :p8_venue %><br>
+    <%= f.text_field :p8_venue, :value => @venue %>
+  </div>
+  <div class="field">
+    <%= f.label :p8_position %><br>
+    <%= f.number_field :p8_position, :value => '8' %>
+  </div>
+</div>
+<div class="Player">
+  <div class="field">
+    <%= f.label :g1_first_name %><br>
+    <%= f.text_field :g1_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :g1_last_name %><br>
+    <%= f.text_field :g1_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :g1_handicap %><br>
+    <%= f.text_field :g1_handicap %>
+  </div>
+  <div class="field">
+    <%= f.label :g1_club %><br>
+    <%= f.text_field :g1_club %>
+  </div>
+  <div class="field">
+    <%= f.label :g1_venue %><br>
+    <%= f.text_field :g1_venue, :value => @venue %>
+  </div>
+  <div class="field">
+    <%= f.label :g1_position %><br>
+    <%= f.number_field :g1_position, :value => '9' %>
+  </div>
+</div>
+<div class="Player">
+  <div class="field">
+    <%= f.label :g2_first_name %><br>
+    <%= f.text_field :g2_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :g2_last_name %><br>
+    <%= f.text_field :g2_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :g2_handicap %><br>
+    <%= f.text_field :g2_handicap %>
+  </div>
+  <div class="field">
+    <%= f.label :g2_club %><br>
+    <%= f.text_field :g2_club %>
+  </div>
+  <div class="field">
+    <%= f.label :g2_venue %><br>
+    <%= f.text_field :g2_venue, :value => @venue %>
+  </div>
+  <div class="field">
+    <%= f.label :g2_position %><br>
+    <%= f.number_field :g2_position, :value => '10' %>
+  </div>
+</div>
+<div class="Player"
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+</div>
+<% end %>
