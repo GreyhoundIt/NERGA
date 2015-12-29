@@ -5,6 +5,12 @@ class SubmissionsController < ApplicationController
   # GET /submissions.json
   def index
     @submissions = Submission.all
+
+    respond_to do |format|
+    format.html
+    format.csv { send_data @submissions.as_csv }
+  end
+
   end
 
   # GET /submissions/1
