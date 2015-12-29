@@ -1,13 +1,16 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
 <h1>Zones#blue</h1>
 <p>Find me in app/views/zones/blue.html.erb</p>
 <ul>
-  <li>WHITBY  <time datetime="2015-11-1">November 1st 11.00</time> <%= link_to "Enter Team", :controller => :submissions, :action => :new, :fixture =>"Whitby"%>  </li>
-  <li>EASINGWOLD  <time datetime="2015-11-2">November 2nd 10.34</time> <%= link_to "Enter Team", :controller => :submissions, :action => :new, :fixture =>"Easingwold"%> </li>
-  <li>DARLINGTON  <time datetime="2015-11-15">November 15th 9.30</time> <%= link_to "Enter Team", :controller => :submissions, :action => :new, :fixture =>"Darlington"%> </li>
-  <li>RIPON CITY  <time datetime="2015-11-16">November 16th 11.00</time> <%= link_to "Enter Team", :controller => :submissions, :action => :new, :fixture =>"Ripon City"%> </li>
-  <li>ROMANBY  <time datetime="2015-11-20">November 20th 13.00</time> <%= link_to "Enter Team", :controller => :submissions, :action => :new, :fixture =>"Romanby"%> </li>
-  <li>KIRKBYMOORSIDE <time datetime="2015-11-21">November 21st</time> <%= link_to "Enter Team", :controller => :submissions, :action => :new, :fixture =>"Kirkbymoreside"%> </li>
-  <li>BEDALE  <time datetime="2015-11-25">November 25th 8.30</time> <%= link_to "Enter Team", :controller => :submissions, :action => :new, :fixture =>"Bedale"%></li>
-  <li>CATTERICK  <time datetime="2015-11-30">November 30th 9.00</time> <%= link_to "Enter Team", :controller => :submissions, :action => :new, :fixture =>"Caterick"%></li>
+  <li>WHITBY  <time datetime="2015-11-1">November 1st 11.00</time> <%= link_to "Enter Team", {:controller => :submissions, :action => :new, :fixture =>"Whitby" }, :class => "datelink" %>  </li>
+  <li>EASINGWOLD  <time datetime="2015-11-2">November 2nd 10.34</time> <%= link_to "Enter Team", {:controller => :submissions, :action => :new, :fixture =>"Easingwold"}, :class => "datelink"%> </li>
+  <li>DARLINGTON  <time datetime="2015-11-15">November 15th 9.30</time> <%= link_to "Enter Team", {:controller => :submissions, :action => :new, :fixture =>"Darlington"}, :class => "datelink"%> </li>
+  <li>RIPON CITY  <time datetime="2015-11-16">November 16th 11.00</time> <%= link_to "Enter Team", {:controller => :submissions, :action => :new, :fixture =>"Ripon City"}, :class => "datelink"%> </li>
+  <li>ROMANBY  <time datetime="2015-11-20">November 20th 13.00</time> <%= link_to "Enter Team", {:controller => :submissions, :action => :new, :fixture =>"Romanby"}, :class => "datelink"%> </li>
+  <li>KIRKBYMOORSIDE <time datetime="2015-11-21">November 21st</time> <%= link_to "Enter Team", {:controller => :submissions, :action => :new, :fixture =>"Kirkbymoreside"}, :class => "datelink"%> </li>
+  <li>BEDALE  <time datetime="2015-11-25">November 25th 8.30</time> <%= link_to "Enter Team", {:controller => :submissions, :action => :new, :fixture =>"Bedale"}, :class => "datelink"%></li>
+  <li>CATTERICK  <time datetime="2016-1-1">November 30th 9.00</time> <%= link_to "Enter Team", {:controller => :submissions, :action => :new, :fixture =>"Caterick"}, :class => "datelink"%></li>
 
 </ul>
