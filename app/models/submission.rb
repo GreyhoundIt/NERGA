@@ -1,4 +1,5 @@
-class Submission < ActiveRecord::Base
+class Submission <  ActiveRecord::Base
+  belongs_to :user
 
   def self.as_csv
   CSV.generate do |csv|

@@ -21,7 +21,7 @@ class SubmissionsController < ApplicationController
   # GET /submissions/new
   def new
     @venue = params[:fixture]
-    @submission = Submission.new
+    @submission = current_user.submissions.build
   end
 
   # GET /submissions/1/edit
@@ -32,7 +32,7 @@ class SubmissionsController < ApplicationController
   # POST /submissions
   # POST /submissions.json
   def create
-    @submission = Submission.new(submission_params)
+    @submission = current_user.submissions.build(submission_params)
 
 
     respond_to do |format|
