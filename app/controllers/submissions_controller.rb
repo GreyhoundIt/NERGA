@@ -20,13 +20,15 @@ class SubmissionsController < ApplicationController
 
   # GET /submissions/new
   def new
-    @venue = params[:fixture]
+    @club = current_user.club.titleize
+    @venue = params[:fixture].titleize
     @submission = current_user.submissions.build
   end
 
   # GET /submissions/1/edit
   def edit
-    @venue = @submission.p1_venue
+    @club = @submission.p1_club.titleize
+    @venue = @submission.p1_venue.titleize
   end
 
   # POST /submissions
