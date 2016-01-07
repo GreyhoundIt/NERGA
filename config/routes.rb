@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get 'zones/blue'
 
   get 'zones/yellow'
+  get 'zones/central'
+  get 'zones/north'
+  get 'zones/south'
 
   resources :submissions
   root to: 'submissions#index'

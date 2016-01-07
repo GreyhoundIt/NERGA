@@ -10,4 +10,14 @@ class ZonesController < ApplicationController
 
   def yellow
   end
+
+  def central
+  end
+
+  def north
+  end
+
+  def south
+  end
+  
 end
