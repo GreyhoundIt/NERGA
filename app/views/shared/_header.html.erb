@@ -13,7 +13,47 @@
   <nav class="navbar navbar-default" role="navigation">
     <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/">NERGA</a>
+          <%= link_to "NERGA" , root_path , :class=>'navbar-brand' %>
+            <ul class="nav navbar-nav">
+              <li>  <%= link_to "Home", controller: "/static", action: "home"   %></li>
+              <li>  <%= link_to "Finals Day", controller: "/static", action: "finals"  %></li>
+              <li>  <%= link_to "Rules", controller: "/static", action: "rules"  %></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NERGA <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li>  <%= link_to "Red zone", controller: "/zones", action: "red"  %></li>
+                          <li>  <%= link_to "Blue Zone", controller: "/zones", action: "blue"  %></li>
+                          <li>  <%= link_to "Green zone", controller: "/zones", action: "green"  %></li>
+                          <li>  <%= link_to "Yellow Zone", controller: "/zones", action: "yellow"  %></li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INTER <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li>  <%= link_to "Red zone", controller: "/zones", action: "north"  %></li>
+                          <li>  <%= link_to "Blue Zone", controller: "/zones", action: "central"  %></li>
+                          <li>  <%= link_to "Green zone", controller: "/zones", action: "south"  %></li>
+                      </ul>
+                    </li>
+
+              <li>  <%= link_to "Honours", controller: "/static", action: "honours"   %></li>
+              <li>  <%= link_to "Links", controller: "/static", action: "links"   %></li>
+              <li>  <%= link_to "Sponsors", controller: "/static", action: "sponsors"   %></li>
+              <% if user_signed_in? %>
+                <li>
+                <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                </li>
+              <% else %>
+                <li>
+                <%= link_to('Login', new_user_session_path)  %>
+                </li>
+                
+              <% end %>
+                <% if user_signed_in? %>
+                <li><a href="#" class="nopoint">  Signed in as <%= current_user.club.titleize %></a> </li>
+              <% end %>
+            </ul>
         </div>
     </div>
   </nav>

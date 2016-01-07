@@ -1,23 +1,14 @@
 Rails.application.routes.draw do
   get 'static/home'
-
   get 'static/finals'
-
   get 'static/rules'
-
   get 'static/honours'
-
   get 'static/links'
-
   get 'static/sponsors'
-
   devise_for :users, :controllers => { registrations: 'registrations' }
   get 'zones/red'
-
   get 'zones/green'
-
   get 'zones/blue'
-
   get 'zones/yellow'
   get 'zones/central'
   get 'zones/north'

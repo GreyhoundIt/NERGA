@@ -16,6 +16,14 @@
 @import "scaffolds.css";
 @import "submissions.css";
 @import "zones.css";
+
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+
+.nopoint {
+  cursor: default;
+}
  form > div {
    float:left;
    display: inline-block;
@@ -30,6 +38,13 @@ header{
   padding-top: 25px;
   padding-bottom: 25px;
 
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0d8aa9+0,22bde0+100 */
+  background: #0d8aa9; /* Old browsers */
+  background: -moz-linear-gradient(top,  #0d8aa9 0%, #22bde0 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #0d8aa9 0%,#22bde0 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #0d8aa9 0%,#22bde0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d8aa9', endColorstr='#22bde0',GradientType=0 ); /* IE6-9 */
+
   #logo{
     padding-left: 40px;
   }
@@ -37,7 +52,7 @@ header{
       vertical-align: middle;
       h1{
         font-family: Helvetica, sans-serif;
-        color: #005267;
+        color: white;
       }
   }
 }
