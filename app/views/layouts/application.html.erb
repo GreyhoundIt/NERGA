@@ -9,8 +9,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="main-container" class="container">
+    <%= render 'shared/header' %>
+    <div class="row">
+      <div id="content" class="col-md-9">
+        <%= yield %>
+      </div><!--end of content-->
+      <div id="sidebar" class="col-md-3">
+         <h1>Sidebar place holder</h1>
+      </div><!--end of sidebar-->
+    </div><!--end of row-->
+  </div><!-- end of bootrstap container-->
 </body>
 </html>

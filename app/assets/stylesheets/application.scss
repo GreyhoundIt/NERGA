@@ -10,10 +10,34 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "scaffolds.css";
+@import "submissions.css";
+@import "zones.css";
  form > div {
    float:left;
    display: inline-block;
  }
+body{
+  background-color: #005267;
+}
+.container{
+  background-color: white;
+}
+header{
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  #logo{
+    padding-left: 40px;
+  }
+  #intro{
+      vertical-align: middle;
+      h1{
+        font-family: Helvetica, sans-serif;
+        color: #005267;
+      }
+  }
+}
