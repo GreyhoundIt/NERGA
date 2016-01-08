@@ -3,5 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 form > div {
   float:left;
-  display: inline-block;
+  display: inline-flex;
+}
+.form-btn{
+  display: block;
 }
