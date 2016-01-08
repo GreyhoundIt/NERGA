@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get 'zones/central'
   get 'zones/north'
   get 'zones/south'
-
+  get 'submissions/fixturelist'
+  get 'submissions/fixtureshow'
   resources :submissions
   root to: 'submissions#index'
   # The priority is based upon order of creation: first created -> highest priority.

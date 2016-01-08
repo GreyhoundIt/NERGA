@@ -9,8 +9,21 @@ class SubmissionsController < ApplicationController
     respond_to do |format|
     format.html
     format.csv { send_data @submissions.as_csv }
+    end
+
   end
 
+  def fixturelist
+  end
+
+  def fixtureshow
+    @venue = params[:fixture]
+    @submissions = Submission.where(p1_venue: @venue )
+
+    respond_to do |format|
+    format.html
+    format.csv { send_data @submissions.as_csv }
+    end
   end
 
   # GET /submissions/1
