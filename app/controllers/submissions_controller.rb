@@ -1,16 +1,23 @@
 class SubmissionsController < ApplicationController
-  before_action :set_submission, only: [:show, :edit, :update, :destroy]
+  before_action :set_submission, only: [:show, :update, :destroy]
+  before_action :find_submisionedit, only: [:edit]
+  def teamentry
+    @venue = params[:fixture]
+    if Submission.where(user_id: current_user.id, p1_venue: params[:fixture]).any?
+      redirect_to action: "edit" , fixture: @venue
+    else
+      redirect_to action: "new" , fixture: @venue
+    end
+  end
 
   # GET /submissions
   # GET /submissions.json
   def index
     @submissions = Submission.all
-
     respond_to do |format|
     format.html
     format.csv { send_data @submissions.as_csv }
     end
-
   end
 
   def fixturelist
@@ -19,7 +26,6 @@ class SubmissionsController < ApplicationController
   def fixtureshow
     @venue = params[:fixture]
     @submissions = Submission.where(p1_venue: @venue )
-
     respond_to do |format|
     format.html
     format.csv { send_data @submissions.as_csv }
@@ -33,15 +39,15 @@ class SubmissionsController < ApplicationController
 
   # GET /submissions/new
   def new
-    @club = current_user.club.titleize
-    @venue = params[:fixture].titleize
+    @club = current_user.club
+    @venue = params[:fixture]
     @submission = current_user.submissions.build
   end
 
   # GET /submissions/1/edit
   def edit
-    @club = @submission.p1_club.titleize
-    @venue = @submission.p1_venue.titleize
+    @club = current_user.club
+    @venue = params[:fixture]
   end
 
   # POST /submissions
@@ -91,6 +97,9 @@ class SubmissionsController < ApplicationController
       @submission = Submission.find(params[:id])
     end
 
+    def find_submisionedit
+      @submission = Submission.where(user_id: current_user.id, p1_venue: params[:fixture]).first
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def submission_params
       params.require(:submission).permit(:p1_first_name, :p1_last_name, :p1_handicap, :p1_club, :p1_venue, :p1_position, :p2_first_name, :p2_last_name, :p2_handicap, :p2_club, :p2_venue, :p2_position, :p3_first_name, :p3_last_name, :p3_handicap, :p3_club, :p3_venue, :p3_position, :p4_first_name, :p4_last_name, :p4_handicap, :p4_club, :p4_venue, :p4_position, :p5_first_name, :p5_last_name, :p5_handicap, :p5_club, :p5_venue, :p5_position, :p6_first_name, :p6_last_name, :p6_handicap, :p6_club, :p6_venue, :p6_position, :p7_first_name, :p7_last_name, :p7_handicap, :p7_club, :p7_venue, :p7_position, :p8_first_name, :p8_last_name, :p8_handicap, :p8_club, :p8_venue, :p8_position, :g1_first_name, :g1_last_name, :g1_handicap, :g1_club, :g1_venue, :g1_position, :g2_first_name, :g2_last_name, :g2_handicap, :g2_club, :g2_venue, :g2_position, :fixture)
