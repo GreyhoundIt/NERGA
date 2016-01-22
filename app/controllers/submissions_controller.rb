@@ -1,10 +1,10 @@
 class SubmissionsController < ApplicationController
-  before_action :set_submission, only: [:show, :update, :destroy]
-  before_action :find_submisionedit, only: [:edit]
+  before_action :set_submission, only: [:show, :edit, :update, :destroy]
+  before_action :find_submisionedit, only: [:editfromfix]
   def teamentry
     @venue = params[:fixture]
     if Submission.where(user_id: current_user.id, p1_venue: params[:fixture]).any?
-      redirect_to action: "edit" , fixture: @venue
+      redirect_to action: "editfromfix" , fixture: @venue
     else
       redirect_to action: "new" , fixture: @venue
     end
@@ -46,6 +46,11 @@ class SubmissionsController < ApplicationController
 
   # GET /submissions/1/edit
   def edit
+    @club = current_user.club
+    @venue = params[:fixture]
+  end
+
+  def editfromfix
     @club = current_user.club
     @venue = params[:fixture]
   end

@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'submissions/fixtureshow'
   get 'submissions/teamentry'
   get 'submissions/edit'
+  get 'submissions/editfromfix'
   resources :submissions
   root to: 'submissions#index'
   # The priority is based upon order of creation: first created -> highest priority.

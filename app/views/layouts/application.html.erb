@@ -15,9 +15,7 @@
       <div id="content" class="col-md-9">
         <%= yield %>
       </div><!--end of content-->
-      <div id="sidebar" class="col-md-3">
-         <h1>Sidebar place holder</h1>
-      </div><!--end of sidebar-->
+        <%= render 'shared/sidebar' %>
     </div><!--end of row-->
     <%= render 'shared/footer' %>
   </div><!-- end of bootrstap container-->

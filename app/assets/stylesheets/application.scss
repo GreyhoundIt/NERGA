@@ -16,6 +16,11 @@
 @import "scaffolds.css";
 @import "submissions.css";
 @import "zones.css";
+@import "static.css";
+
+h1{
+  margin-bottom: 20px;
+}
 
 .dropdown:hover .dropdown-menu {
 display: block;
@@ -29,6 +34,12 @@ body{
 }
 .container{
   background-color: white;
+}
+
+#content{
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 20px;
 }
 header{
   padding-top: 25px;

@@ -1,0 +1,31 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+  ul, ol{
+    li{
+      margin-bottom: 15px;
+    }
+    li:last-of-type{
+      margin-bottom: 30px;
+    }
+  }
+
+.fixture, .golfclubs {
+  ul{
+    list-style-type: none;
+  }
+}
+#greyhoundlink{
+  margin-top: 20px;
+    color: white;
+  }
+.greylogo{
+  margin: 20px 0px 20px 0px;
+}
+.leadpic{
+  max-width:100%;
+  height:auto;
+  margin-bottom: 20px;
+}
