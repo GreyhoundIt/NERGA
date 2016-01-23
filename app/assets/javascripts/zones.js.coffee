@@ -2,7 +2,9 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
+  now = undefined
   now = new Date
+
   $('ul li time').each ->
     dateTime = Date.parse($(this).attr('datetime'))
     startdate = new Date(dateTime)
