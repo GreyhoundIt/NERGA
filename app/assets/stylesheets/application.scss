@@ -17,6 +17,7 @@
 @import "submissions.css";
 @import "zones.css";
 @import "static.css";
+@import "posts.css";
 
 h1{
   margin-bottom: 20px;
@@ -28,6 +29,7 @@ display: block;
 
 .nopoint {
   cursor: default;
+  font-size: 10px;
 }
 body{
   background-color: #005267;
@@ -70,4 +72,9 @@ footer{
   p{
     color: #f0ffff;
   }
+}
+
+hr{
+  background-color: #fff;
+	border-top: 2px dashed #22bde0;
 }

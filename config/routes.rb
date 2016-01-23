@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :posts
+
   get 'static/home'
   get 'static/finals'
   get 'static/rules'
