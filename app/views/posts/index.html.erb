@@ -6,13 +6,13 @@
     <% @posts.each do |post| %>
     <h3><%= post.title %></h3>
     <p><%= truncate(post.body, length: 100) { link_to 'Read More', post} %></p>
-      <% if user_signed_in? && current_user.email == "matthew@greyhoundit.co.uk" %>
+      <% if user_signed_in? && current_user.club == "Admin" %>
       <p><%= link_to 'Edit', edit_post_path(post) %></p>
       <p><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
       <% end %>
     <% end %>
 
 <hr>
-<% if user_signed_in? && current_user.email == "matthew@greyhoundit.co.uk" %>
+<% if user_signed_in? && current_user.club == "Admin" %>
 <%= link_to 'New Post', new_post_path %>
 <% end %>

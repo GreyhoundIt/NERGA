@@ -58,4 +58,13 @@
         </div>
     </div>
   </nav>
+
+  <% if user_signed_in? && current_user.club == "Admin" %>
+  <div>
+    <%= link_to "Admin Area", {controller: "/submissions", action: "fixturelist"}, :class=>"btn btn-danger btn-block"   %>
+   </div>
+  <% end %>
+
+
+
 </div><!-- end of row-->
