@@ -12,6 +12,7 @@
       </ul>
     </div>
   <% end %>
+
 <div class="Player">
   <div class="field">
     <%= f.label :p1_first_name %><br>
@@ -247,10 +248,11 @@
   <div class="field">
     <%= f.hidden_field :g2_position, :value => '10' %>
   </div>
+  <%= render 'shared/problem' %>
 </div>
 <div class="Player">
     <div class="field form-btn">
-    <%= f.submit %>
+    <%= f.submit "Submit Player details"%>
   </div>
 </div>
 <% end %>
