@@ -28,16 +28,15 @@
   </div>
   <div class="field">
 
-    <%= f.hidden_field :p1_club,:value => @club %>
+    <%= f.hidden_field :team,:value => @club %>
   </div>
   <div class="field">
-
-    <%= f.hidden_field :p1_venue, :value => @venue %>
+    <%= f.hidden_field :venue, :value => @venue %>
   </div>
   <div class="field">
-
-    <%= f.hidden_field :p1_position, :value => '1' %>
+    <%= f.hidden_field :league, :value => @league %>
   </div>
+
 </div>
 <div class="Player">
   <div class="field">
@@ -52,20 +51,9 @@
     <%= f.label :p2_handicap %><br>
     <%= f.text_field :p2_handicap %>
   </div>
-  <div class="field">
 
-    <%= f.hidden_field :p2_club,:value => @club %>
-  </div>
-  <div class="field">
-
-    <%= f.hidden_field :p2_venue, :value => @venue %>
-  </div>
-  <div class="field">
-
-    <%= f.hidden_field :p2_position, :value => '2' %>
-  </div>
 </div>
-<div class="Player">
+  <div class="Player">
   <div class="field">
     <%= f.label :p3_first_name %><br>
     <%= f.text_field :p3_first_name %>
@@ -78,15 +66,7 @@
     <%= f.label :p3_handicap %><br>
     <%= f.text_field :p3_handicap %>
   </div>
-  <div class="field">
-    <%= f.hidden_field :p3_club,:value => @club %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :p3_venue, :value => @venue %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :p3_position, :value => '3' %>
-  </div>
+
 </div>
 <div class="Player">
   <div class="field">
@@ -101,15 +81,7 @@
     <%= f.label :p4_handicap %><br>
     <%= f.text_field :p4_handicap %>
   </div>
-  <div class="field">
-    <%= f.hidden_field :p4_club,:value => @club %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :p4_venue, :value => @venue %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :p4_position, :value => '4' %>
-  </div>
+
 </div>
 <div class="Player">
   <div class="field">
@@ -124,15 +96,7 @@
     <%= f.label :p5_handicap %><br>
     <%= f.text_field :p5_handicap %>
   </div>
-  <div class="field">
-    <%= f.hidden_field :p5_club,:value => @club %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :p5_venue, :value => @venue %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :p5_position, :value => '5' %>
-  </div>
+
 </div>
 <div class="Player">
   <div class="field">
@@ -147,15 +111,7 @@
     <%= f.label :p6_handicap %><br>
     <%= f.text_field :p6_handicap %>
   </div>
-  <div class="field">
-    <%= f.hidden_field :p6_club,:value => @club %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :p6_venue, :value => @venue %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :p6_position, :value => '6' %>
-  </div>
+
 </div>
 <div class="Player">
   <div class="field">
@@ -170,15 +126,7 @@
     <%= f.label :p7_handicap %><br>
     <%= f.text_field :p7_handicap %>
   </div>
-  <div class="field">
-    <%= f.hidden_field :p7_club,:value => @club %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :p7_venue, :value => @venue %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :p7_position, :value => '7' %>
-  </div>
+
 </div>
 <div class="Player">
   <div class="field">
@@ -193,15 +141,7 @@
     <%= f.label :p8_handicap %><br>
     <%= f.text_field :p8_handicap %>
   </div>
-  <div class="field">
-    <%= f.hidden_field :p8_club,:value => @club %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :p8_venue, :value => @venue %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :p8_position, :value => '8' %>
-  </div>
+
 </div>
 <div class="Player">
   <div class="field">
@@ -216,15 +156,7 @@
     <%= f.label :g1_handicap %><br>
     <%= f.text_field :g1_handicap %>
   </div>
-  <div class="field">
-    <%= f.hidden_field :g1_club,:value => @club %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :g1_venue, :value => @venue %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :g1_position, :value => '9' %>
-  </div>
+
 </div>
 <div class="Player">
   <div class="field">
@@ -239,18 +171,38 @@
     <%= f.label :g2_handicap %><br>
     <%= f.text_field :g2_handicap %>
   </div>
-  <div class="field">
-    <%= f.hidden_field :g2_club,:value => @club %>
+</div>
+  <div class="Player">
+    <div class="field">
+      <%= f.label :g3_first_name %><br>
+      <%= f.text_field :g3_first_name %>
+    </div>
+    <div class="field">
+      <%= f.label :g3_last_name %><br>
+      <%= f.text_field :g3_last_name %>
+    </div>
+    <div class="field">
+      <%= f.label :g3_handicap %><br>
+      <%= f.text_field :g3_handicap %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.hidden_field :g2_venue, :value => @venue %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :g2_position, :value => '10' %>
-  </div>
-  <%= render 'shared/problem' %>
+    <div class="Player">
+      <div class="field">
+        <%= f.label :g4_first_name %><br>
+        <%= f.text_field :g4_first_name %>
+      </div>
+      <div class="field">
+        <%= f.label :g4_last_name %><br>
+        <%= f.text_field :g4_last_name %>
+      </div>
+      <div class="field">
+        <%= f.label :g4_handicap %><br>
+        <%= f.text_field :g4_handicap %>
+      </div>
+
 </div>
 <div class="Player">
+  <%= render 'shared/problem' %>
     <div class="field form-btn">
     <%= f.submit "Submit Player details"%>
   </div>

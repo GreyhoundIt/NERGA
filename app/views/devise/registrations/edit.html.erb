@@ -10,7 +10,7 @@
 
   <div class="field">
 
-<%= select(:user, :club, Club.all.collect {|club| [club.name, club.name]}) %>
+    <%= select(:user, :club, Club.all.collect {|club| [club.name, club.name]}) %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

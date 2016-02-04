@@ -3,7 +3,7 @@ class SubmissionsController < ApplicationController
   before_action :find_submisionedit, only: [:editfromfix]
   def teamentry
     @venue = params[:fixture]
-    if Submission.where(user_id: current_user.id, p1_venue: params[:fixture]).any?
+    if Submission.where(user_id: current_user.id, venue: params[:fixture]).any?
       redirect_to action: "editfromfix" , fixture: @venue
     else
       redirect_to action: "new" , fixture: @venue
@@ -17,6 +17,7 @@ class SubmissionsController < ApplicationController
     respond_to do |format|
     format.html
     format.csv { send_data @submissions.as_csv }
+    format.xls { send_data @submissions.as_csv(col_sep: "\t") }
     end
   end
 
@@ -25,7 +26,7 @@ class SubmissionsController < ApplicationController
 
   def fixtureshow
     @venue = params[:fixture]
-    @submissions = Submission.where(p1_venue: @venue )
+    @submissions = Submission.where(venue: @venue )
     respond_to do |format|
     format.html
     format.csv { send_data @submissions.as_csv }
@@ -40,6 +41,7 @@ class SubmissionsController < ApplicationController
   # GET /submissions/new
   def new
     @club = current_user.club
+    @league = current_user.zone
     @venue = params[:fixture]
     @submission = current_user.submissions.build
   end
@@ -47,11 +49,13 @@ class SubmissionsController < ApplicationController
   # GET /submissions/1/edit
   def edit
     @club = current_user.club
+    @league = current_user.zone
     @venue = params[:fixture]
   end
 
   def editfromfix
     @club = current_user.club
+    @league = current_user.zone
     @venue = params[:fixture]
   end
 
@@ -103,10 +107,10 @@ class SubmissionsController < ApplicationController
     end
 
     def find_submisionedit
-      @submission = Submission.where(user_id: current_user.id, p1_venue: params[:fixture]).first
+      @submission = Submission.where(user_id: current_user.id, venue: params[:fixture]).first
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def submission_params
-      params.require(:submission).permit(:p1_first_name, :p1_last_name, :p1_handicap, :p1_club, :p1_venue, :p1_position, :p2_first_name, :p2_last_name, :p2_handicap, :p2_club, :p2_venue, :p2_position, :p3_first_name, :p3_last_name, :p3_handicap, :p3_club, :p3_venue, :p3_position, :p4_first_name, :p4_last_name, :p4_handicap, :p4_club, :p4_venue, :p4_position, :p5_first_name, :p5_last_name, :p5_handicap, :p5_club, :p5_venue, :p5_position, :p6_first_name, :p6_last_name, :p6_handicap, :p6_club, :p6_venue, :p6_position, :p7_first_name, :p7_last_name, :p7_handicap, :p7_club, :p7_venue, :p7_position, :p8_first_name, :p8_last_name, :p8_handicap, :p8_club, :p8_venue, :p8_position, :g1_first_name, :g1_last_name, :g1_handicap, :g1_club, :g1_venue, :g1_position, :g2_first_name, :g2_last_name, :g2_handicap, :g2_club, :g2_venue, :g2_position, :fixture)
+      params.require(:submission).permit(:p1_first_name, :p1_last_name, :p1_handicap, :team, :venue, :league, :p2_first_name, :p2_last_name, :p2_handicap, :p3_first_name, :p3_last_name, :p3_handicap, :p4_first_name, :p4_last_name, :p4_handicap, :p5_first_name, :p5_last_name, :p5_handicap, :p6_first_name, :p6_last_name, :p6_handicap, :p7_first_name, :p7_last_name, :p7_handicap, :p8_first_name, :p8_last_name, :p8_handicap, :g1_first_name, :g1_last_name, :g1_handicap,  :g2_first_name, :g2_last_name, :g2_handicap, :g3_first_name, :g3_last_name, :g3_handicap, :g4_first_name, :g4_last_name, :g4_handicap, :fixture)
     end
 end

@@ -8,7 +8,7 @@
       <th>Handicap</th>
       <th>Club</th>
       <th>Venue</th>
-      <th>Position</th>
+
 
       <th colspan="3"></th>
     </tr>
@@ -20,81 +20,86 @@
         <td><%= submission.p1_first_name %></td>
         <td><%= submission.p1_last_name %></td>
         <td><%= submission.p1_handicap %></td>
-        <td><%= submission.p1_club %></td>
-        <td><%= submission.p1_venue %></td>
-        <td><%= submission.p1_position %></td>
+        <td><%= submission.team %></td>
+        <td><%= submission.venue %></td>
+
       </tr>
       <tr>
         <td><%= submission.p2_first_name %></td>
         <td><%= submission.p2_last_name %></td>
         <td><%= submission.p2_handicap %></td>
-        <td><%= submission.p2_club %></td>
-        <td><%= submission.p2_venue %></td>
-        <td><%= submission.p2_position %></td>
+        <td><%= submission.team %></td>
+        <td><%= submission.venue %></td>
       </tr>
       <tr>
         <td><%= submission.p3_first_name %></td>
         <td><%= submission.p3_last_name %></td>
         <td><%= submission.p3_handicap %></td>
-        <td><%= submission.p3_club %></td>
-        <td><%= submission.p3_venue %></td>
-        <td><%= submission.p3_position %></td>
+        <td><%= submission.team %></td>
+        <td><%= submission.venue %></td>
       </tr>
       <tr>
         <td><%= submission.p4_first_name %></td>
         <td><%= submission.p4_last_name %></td>
         <td><%= submission.p4_handicap %></td>
-        <td><%= submission.p4_club %></td>
-        <td><%= submission.p4_venue %></td>
-        <td><%= submission.p4_position %></td>
+        <td><%= submission.team %></td>
+        <td><%= submission.venue %></td>
       </tr>
       <tr>
         <td><%= submission.p5_first_name %></td>
         <td><%= submission.p5_last_name %></td>
         <td><%= submission.p5_handicap %></td>
-        <td><%= submission.p5_club %></td>
-        <td><%= submission.p5_venue %></td>
-        <td><%= submission.p5_position %></td>
+        <td><%= submission.team %></td>
+        <td><%= submission.venue %></td>
       </tr>
       <tr>
         <td><%= submission.p6_first_name %></td>
         <td><%= submission.p6_last_name %></td>
         <td><%= submission.p6_handicap %></td>
-        <td><%= submission.p6_club %></td>
-        <td><%= submission.p6_venue %></td>
-        <td><%= submission.p6_position %></td>
+        <td><%= submission.team %></td>
+        <td><%= submission.venue %></td>
       </tr>
       <tr>
         <td><%= submission.p7_first_name %></td>
         <td><%= submission.p7_last_name %></td>
         <td><%= submission.p7_handicap %></td>
-        <td><%= submission.p7_club %></td>
-        <td><%= submission.p7_venue %></td>
-        <td><%= submission.p7_position %></td>
+        <td><%= submission.team %></td>
+        <td><%= submission.venue %></td>
       </tr>
       <tr>
         <td><%= submission.p8_first_name %></td>
         <td><%= submission.p8_last_name %></td>
         <td><%= submission.p8_handicap %></td>
-        <td><%= submission.p8_club %></td>
-        <td><%= submission.p8_venue %></td>
-        <td><%= submission.p8_position %></td>
+        <td><%= submission.team %></td>
+        <td><%= submission.venue %></td>
       </tr>
       <tr>
         <td><%= submission.g1_first_name %></td>
         <td><%= submission.g1_last_name %></td>
         <td><%= submission.g1_handicap %></td>
-        <td><%= submission.g1_club %></td>
-        <td><%= submission.g1_venue %></td>
-        <td><%= submission.g1_position %></td>
+        <td><%= submission.team %></td>
+        <td><%= submission.venue %></td>
       </tr>
       <tr>
         <td><%= submission.g2_first_name %></td>
         <td><%= submission.g2_last_name %></td>
         <td><%= submission.g2_handicap %></td>
-        <td><%= submission.g2_club %></td>
-        <td><%= submission.g2_venue %></td>
-        <td><%= submission.g2_position %></td>
+        <td><%= submission.team %></td>
+        <td><%= submission.venue %></td>
+      </tr>
+      <tr>
+        <td><%= submission.g3_first_name %></td>
+        <td><%= submission.g3_last_name %></td>
+        <td><%= submission.g3_handicap %></td>
+        <td><%= submission.team %></td>
+        <td><%= submission.venue %></td>
+      </tr>
+      <tr>
+        <td><%= submission.g4_first_name %></td>
+        <td><%= submission.g4_last_name %></td>
+        <td><%= submission.g4_handicap %></td>
+        <td><%= submission.team %></td>
+        <td><%= submission.venue %></td>
         <% if user_signed_in? && current_user.id == submission.user_id %>
         <td><%= link_to 'Show', submission %></td>
         <td><%= link_to 'Edit', edit_submission_path(submission) %></td>

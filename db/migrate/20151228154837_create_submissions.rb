@@ -1,11 +1,12 @@
 class CreateSubmissions < ActiveRecord::Migration
   def change
     create_table :submissions do |t|
+      t.string :p1_club
+      t.string :p1_venue
+      t.string :type
       t.string :p1_first_name
       t.string :p1_last_name
       t.float :p1_handicap
-      t.string :p1_club
-      t.string :p1_venue
       t.integer :p1_position
       t.string :p2_first_name
       t.string :p2_last_name
@@ -61,6 +62,12 @@ class CreateSubmissions < ActiveRecord::Migration
       t.string :g2_club
       t.string :g2_venue
       t.integer :g2_position
+      t.string :g3_first_name
+      t.string :g3_last_name
+      t.float :g3_handicap
+      t.string :g4_first_name
+      t.string :g4_last_name
+      t.float :g4_handicap
 
       t.timestamps
     end
