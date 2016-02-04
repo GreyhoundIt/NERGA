@@ -19,7 +19,7 @@ form > div {
     text-align: center;
   }
 }
-.blue{
+.blue, .south{
   background-color: #0041C2;
   color: white;
 }
@@ -27,24 +27,18 @@ form > div {
   background-color: #347C17;
     color: white;
 }
-.red{
+.red, .north{
   background-color: #dc381f;
 }
-.yellow{
+.yellow, .central{
   background-color: #fff380;
 }
-.north{
-  background-color: #2c3539;
-  color: white;
-}
-.central{
-  background-color: #5e5a80;
-  color: white;
-}
-.south{
-background-color: #c2b280;
-}
+
 .btn1{
   color: white !important;
   margin-right: 20px !important;
+}
+
+.bp {
+    margin-top: 50px;
 }

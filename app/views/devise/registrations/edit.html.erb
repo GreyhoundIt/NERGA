@@ -9,7 +9,7 @@
   </div>
 
   <div class="field">
-
+      <%= f.label :club %><br />
     <%= select(:user, :club, Club.all.collect {|club| [club.name, club.name]}) %>
   </div>
 

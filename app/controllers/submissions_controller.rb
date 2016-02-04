@@ -3,10 +3,11 @@ class SubmissionsController < ApplicationController
   before_action :find_submisionedit, only: [:editfromfix]
   def teamentry
     @venue = params[:fixture]
+    @league = params[:league]
     if Submission.where(user_id: current_user.id, venue: params[:fixture]).any?
-      redirect_to action: "editfromfix" , fixture: @venue
+      redirect_to action: "editfromfix" , fixture: @venue, league:@league
     else
-      redirect_to action: "new" , fixture: @venue
+      redirect_to action: "new" , fixture: @venue, league:@league
     end
   end
 
@@ -41,7 +42,7 @@ class SubmissionsController < ApplicationController
   # GET /submissions/new
   def new
     @club = current_user.club
-    @league = current_user.zone
+    @league = params[:league]
     @venue = params[:fixture]
     @submission = current_user.submissions.build
   end
@@ -49,13 +50,13 @@ class SubmissionsController < ApplicationController
   # GET /submissions/1/edit
   def edit
     @club = current_user.club
-    @league = current_user.zone
+    @league = params[:league]
     @venue = params[:fixture]
   end
 
   def editfromfix
     @club = current_user.club
-    @league = current_user.zone
+    @league = params[:league]
     @venue = params[:fixture]
   end
 
