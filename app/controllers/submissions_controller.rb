@@ -1,6 +1,7 @@
 class SubmissionsController < ApplicationController
   before_action :set_submission, only: [:show, :edit, :update, :destroy]
   before_action :find_submisionedit, only: [:editfromfix]
+  before_action :authenticate_user!, except: [ :index, :show ]
   def teamentry
     @venue = params[:fixture]
     @league = params[:league]
