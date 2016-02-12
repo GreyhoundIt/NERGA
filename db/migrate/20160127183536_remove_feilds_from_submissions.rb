@@ -25,8 +25,6 @@ class RemoveFeildsFromSubmissions < ActiveRecord::Migration
     remove_column :submissions, :g1_club, :string
     remove_column :submissions, :g1_venue, :string
     remove_column :submissions, :g1_position, :string
-    remove_column :submissions, :p2_club, :string
-    remove_column :submissions, :p2_venue, :string
-    remove_column :submissions, :p2_position, :string
+    
   end
 end
