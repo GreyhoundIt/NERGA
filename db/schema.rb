@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160128170744) do
+ActiveRecord::Schema.define(version: 20160217145538) do
 
   create_table "clubs", force: true do |t|
     t.string   "name"
@@ -62,9 +62,6 @@ ActiveRecord::Schema.define(version: 20160128170744) do
     t.string   "g2_first_name"
     t.string   "g2_last_name"
     t.float    "g2_handicap"
-    t.string   "g2_club"
-    t.string   "g2_venue"
-    t.integer  "g2_position"
     t.string   "g3_first_name"
     t.string   "g3_last_name"
     t.float    "g3_handicap"
