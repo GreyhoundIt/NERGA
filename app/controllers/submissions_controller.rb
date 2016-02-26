@@ -45,7 +45,8 @@ class SubmissionsController < ApplicationController
     @club = current_user.club
     @league = params[:league]
     @venue = params[:fixture]
-    @submission = current_user.submissions.build
+    @submission = current_user.submissions.build(league: @league, venue: @venue)
+
   end
 
   # GET /submissions/1/edit
@@ -64,6 +65,9 @@ class SubmissionsController < ApplicationController
   # POST /submissions
   # POST /submissions.json
   def create
+    @club = current_user.club
+    @league = params[:league]
+    @venue = params[:fixture]
     @submission = current_user.submissions.build(submission_params)
 
 

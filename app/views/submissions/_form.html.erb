@@ -1,6 +1,6 @@
 
 
-<%= form_for(@submission,:html => {:class => 'form-inline'})  do |f| %>
+<%= form_for(@submission,url: submissions_path(fixture: params[:fixture], league: params[:league]), :html => {:class => 'form-inline'})  do |f| %>
   <% if @submission.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@submission.errors.count, "error") %> prohibited this submission from being saved:</h2>
