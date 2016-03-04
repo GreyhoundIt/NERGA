@@ -5,8 +5,9 @@ class SubmissionsController < ApplicationController
   def teamentry
     @venue = params[:fixture]
     @league = params[:league]
-    if Submission.where(user_id: current_user.id, venue: params[:fixture]).any?
-      redirect_to action: "editfromfix" , fixture: @venue, league:@league
+    @submissions = Submission.where(user_id: current_user.id, venue: params[:fixture])
+    if  @submissions.any?
+      redirect_to editfromfix_submissions_path(fixture: @venue, league:@league)
     else
       redirect_to action: "new" , fixture: @venue, league:@league
     end
@@ -57,6 +58,8 @@ class SubmissionsController < ApplicationController
   end
 
   def editfromfix
+
+     @submission = Submission.find_by(user_id: current_user.id, venue: params[:fixture])
     @club = current_user.club
     @league = params[:league]
     @venue = params[:fixture]
@@ -85,12 +88,13 @@ class SubmissionsController < ApplicationController
   # PATCH/PUT /submissions/1
   # PATCH/PUT /submissions/1.json
   def update
+      @submission = Submission.find(params[:id])
     respond_to do |format|
       if @submission.update(submission_params)
         format.html { redirect_to @submission, notice: 'Submission was successfully updated.' }
         format.json { render :show, status: :ok, location: @submission }
       else
-        format.html { render :edit }
+        format.html { render :editfromfix }
         format.json { render json: @submission.errors, status: :unprocessable_entity }
       end
     end

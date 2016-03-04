@@ -20,7 +20,10 @@ Rails.application.routes.draw do
   get 'submissions/teamentry'
   get 'submissions/edit'
   get 'submissions/editfromfix'
-  resources :submissions
+
+  resources :submissions do
+      get :editfromfix, on: :collection
+  end
   root to: 'static#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

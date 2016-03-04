@@ -43,6 +43,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3'
+  gem 'byebug'
 end
 group :production do
   gem 'pg'
