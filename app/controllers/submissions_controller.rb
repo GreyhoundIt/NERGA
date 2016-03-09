@@ -52,6 +52,7 @@ class SubmissionsController < ApplicationController
 
   # GET /submissions/1/edit
   def edit
+      @submission = Submission.find_by(user_id: current_user.id, venue: params[:fixture])
     @club = current_user.club
     @league = params[:league]
     @venue = params[:fixture]
