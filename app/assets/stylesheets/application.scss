@@ -19,6 +19,20 @@
 @import "static.css";
 @import "posts.css";
 
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+
 h1{
   margin-bottom: 20px;
 }

@@ -2,4 +2,3 @@
 <%= form_for(@submission,url: submissions_path(fixture: params[:fixture], league: params[:league]), :html => {:class => 'form-inline'})  do |f| %>
 <%= render 'form', f: f %>
 <% end %>
-<%= link_to 'Back', submissions_path %>
