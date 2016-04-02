@@ -95,6 +95,9 @@ class SubmissionsController < ApplicationController
         format.html { redirect_to @submission, notice: 'Submission was successfully updated.' }
         format.json { render :show, status: :ok, location: @submission }
       else
+          @club = current_user.club
+          @league = params[:league]
+          @venue = params[:fixture]
         format.html { render :editfromfix }
         format.json { render json: @submission.errors, status: :unprocessable_entity }
       end
