@@ -10,7 +10,7 @@ $(document).ready ->
     startdate = new Date(dateTime)
     startdate.setDate startdate.getDate() - 14
     enddate = new Date(dateTime)
-    enddate.setDate enddate.getDate() - 3
+    enddate.setDate enddate.getDate() - 2
     if now > startdate and now < enddate
       $(this).next('a.datelink').show()
     return
