@@ -9,5 +9,10 @@
   <li><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Hunley Hotel& Golf  <time datetime="2016-08-07">07/08/2016</time> 11:56 <%= link_to "Player Registration", {:controller => :submissions, :action => :teamentry, :fixture =>"Hunley Hotel& Golf", :league =>"Inter"}, :class => "datelink"%></li>
   <li> <span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Catterick  <time datetime="2016-09-11">11/09/2016</time> 9:00 <%= link_to "Player Registration", {:controller => :submissions, :action => :teamentry, :fixture =>"Catterick", :league =>"Inter" }, :class => "datelink"%></li>
 </ul>
+<div class="overallresults">
+     <a href="public\interblue\Inter Blue Overall_Results_Player_PostEV1.pdf" target="_blank">Overall Player Results</a> </br>
+      <a href="public\interblue\Inter Blue Overall_Results_Team_PostEV1.pdf" target="_blank">Overall Team Results</a>
+  </div>
+
 <%= render 'shared/problem' %>
 </div>
