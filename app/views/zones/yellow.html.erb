@@ -2,7 +2,7 @@
 <div class="fixture">
 <ul>
 
-  <li><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Prudhoe  <time datetime="2016-05-15">15/05/2016</time> 10:00  *Houghton Le Spring, Garesfield <%= link_to "Player Registration", {:controller => :submissions, :action => :teamentry, :fixture =>"Prudhoe", :league =>"Rabbits"}, :class => "datelink"%> </li>
+  <li><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Prudhoe  <time datetime="2016-05-15">15/05/2016</time> <a href="public/yellow/Rabbits Yellow Zone_Prudhoe _Ev2_ Player Score .pdf" target="_blank">Player  Results</a>   <a href="public/yellow/Rabbits Yellow Zone_Prudhoe _Ev2_ TeamScore .pdf" target="_blank">Team Results</a> </li>
   <li><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Bishop Auckland  <time datetime="2016-05-22">22/05/2016</time> 9:30 *Whitburn, Stocksfield  <%= link_to "Player Registration", {:controller => :submissions, :action => :teamentry, :fixture =>"Bishop Auckland", :league =>"Rabbits"}, :class => "datelink"%> </li>
   <li><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Houghton Le Spring  <time datetime="2016-06-04">04/06/2016</time> 10:30 *Blackwell Grange, Ravensworth <%= link_to "Player Registration", {:controller => :submissions, :action => :teamentry, :fixture =>"Houghton Le Spring", :league =>"Rabbits"}, :class => "datelink"%> </li>
   <li><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Chester Le Street  <time datetime="2016-06-26">26/06/2016</time> 10:00 *Seaham, Whitburn<%= link_to "Player Registration", {:controller => :submissions, :action => :teamentry, :fixture =>"Chester Le Street", :league =>"Rabbits"}, :class => "datelink"%> </li>
@@ -15,5 +15,9 @@
 
 </ul>
 <p>* denotes club not playing that fixture</p>
+<div class="overallresults">
+     <a href="public/yellow/Rabbits Yellow -Overall_Results  - PlayersPost EV1.pdf" target="_blank">Overall Player Results</a> </br>
+      <a href="public/yellow/Rabbits Yellow -Overall_Results - Team-Post EV1.pdf" target="_blank">Overall Team Results</a>
+  </div>
 <%= render 'shared/problem' %>
 </div>
