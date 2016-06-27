@@ -1,28 +1,8 @@
 == README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  Website for Noprth East Rabbits Association.
+  
+  Allowed team members to view fixtures.
+  Fixtures become live 14 days before even up to 3 days before ( link will be shown) 
+  Link to entry form where team manages once logged in can enter their teamn
+  
+  Backend allows the league manager to log in and generate a csv file for teams/players for that fixture
